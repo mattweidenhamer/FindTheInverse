@@ -1,6 +1,5 @@
 import pytest
-from library.src.inverse_finder.FindInverse import find_inverse
-
+from library.src.inverse_finder.inverter import find_inverse
 
 testSets = [
     (101, 4620, 1601),

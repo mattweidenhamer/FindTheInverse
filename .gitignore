@@ -9,7 +9,8 @@ __pycache__/
 # VS Code
 .vscode
 
-basicTest.py
+# pylint info
+.pylintrc
 
 # Distribution / packaging
 .Python

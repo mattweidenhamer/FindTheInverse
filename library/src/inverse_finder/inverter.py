@@ -1,7 +1,30 @@
 from math import gcd
 
+"""
+Find the modular inverse of a number.
 
-def find_inverse(number, mod):
+Functions:
+
+    find_inverse(number: int, mod: int) -> int
+    euclidian_algorithm(numberToEqual: int, numberToMultiply: int) -> dict
+"""
+
+
+def find_inverse(number: int, mod: int) -> int:
+    """
+    find_inverse looks for the
+
+    Arguments:
+        number -- An integer remainder of mod.
+        mod -- An integer that number is mod to.
+
+    Raises:
+        ArithmeticError: If somehow none of the returned values are equal to the modulated number, then an arithmetic error is raised.
+
+    Returns:
+        Returns the inverse of the argument number, assuming mod of the argument mod.
+    """
+
     if gcd(number, mod) != 1:
         testVar = gcd(number, mod)
         return None
@@ -17,7 +40,19 @@ def find_inverse(number, mod):
             )
 
 
-def euclidian_algorithm(numberToEqual, numberToMultiply):
+def euclidian_algorithm(numberToEqual: int, numberToMultiply: int) -> dict:
+    """
+    euclidian_algorithm Runs the euclidian algorithm recursively on the passed numbers and returns a dictionary of what their function would be.
+
+    Arguments:
+        numberToEqual -- What number the function needs to equal.
+        numberToMultiply -- What number the function needs to multiply to be greater than or equal to numberToEqual
+
+    Returns:
+        A dictionary containing variables that equal 1 when calculated in the form:
+        (firstCoefficient * firstValue) + (secondCoefficient * secondValue)
+    """
+
     def _checkEquals1(mathDict):
         return (
             True
